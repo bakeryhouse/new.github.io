@@ -1,0 +1,416 @@
+
+html, h1, h2, h3, h4, h5, h6, p, div, span, img, ul, li, select, {
+	padding: 0;
+	margin: 0;
+
+
+}
+
+@font-face {font-family: "bakery"; src: url("../Arial-Rounded-Bold.ttf");}
+@font-face {font-family: "bakeryLight"; src: url("../arial-rounded-mt-regular.ttf");}
+
+
+body {
+	background-color: #F4E9D9;
+	overflow-x: hidden;
+}
+
+#header {
+	font-family: "bakery";
+	position: fixed;
+	text-align: left;
+	width: 100vw;
+	top: 0;
+	right: 0;
+	height: 20vh;
+	background-color: #F4E9D9
+}
+
+.hours {
+	width: 7vw;
+	height: 7vh;
+	/*background-color: #ead1a9;*/
+	position: fixed;
+	top: 0;
+	right: 7vw;
+	text-align: center;
+	-webkit-box-shadow: 1px 13px 6px -8px rgba(0,0,0,0.15); 
+	box-shadow: 1px 13px 6px -8px rgba(0,0,0,0.15);
+}
+
+.secondShadow{
+	width: 7vw;
+	height: 7vh;
+	position: fixed;
+	top: 0;
+	right: 7vw;
+	-webkit-box-shadow: 1px 0px 18px 10px rgba(0,0,0,0.1); 
+	box-shadow: 1px 0px 18px 10px rgba(0,0,0,0.1);
+}
+
+.statement {
+	padding-top: 2.5vh;
+	font-size: 0.8em
+}
+
+#header h1 {
+	margin-left: 3vw;
+	text-align: center;
+	letter-spacing: .5em;
+	color: #41312F
+}
+
+#header button{
+	font-family: "bakery";
+	font-size: 1em;
+    margin: 1vw 0vw 1vw 2vw;
+    border: none;
+    background-color: #F4E9D9;
+    color: #41312F
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+hr {
+	max-width: 90vw;
+	background-color: #41312F;
+	border-color: #A06315;
+	height: 1pt;
+}
+
+.nav {
+	text-align: center;
+}
+
+.nav a{
+	color: #41312F;
+	text-decoration: none;
+}
+
+#wrapper{
+	font-family: "bakery";
+	position: absolute;
+	top: 5vh;
+	z-index:-1;
+	width: 100vw;
+	height: 100%;
+	color: #41312F	
+}
+
+.neon{
+	position: relative;
+	margin-top: 20vh;
+	height: 70vh;
+}
+
+img.logo {
+	position: absolute;
+	margin-top: 0vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 35vw;
+}
+
+.about{
+	max-width: 100vw;
+	height: 25vh;
+	position: relative;
+	text-align: center;
+}
+
+.about p{
+	max-width: 75vw;
+	position: absolute;
+	top: 3vh;
+	left: 50%;
+	transform: translate(-50%,-0%);
+	text-align: center;
+}
+
+.set1 {
+	position: relative;
+	width: 100vw;
+	height: 65vh;
+}
+
+.content {
+	margin-left: 8vw;
+}
+
+.set1 .content {
+	position: relative; 
+	float: left;
+}
+
+.content img{
+	max-width: 22vw;
+}
+
+.caption {
+	display: none;
+	position: absolute;
+	max-width: 22vw;
+	text-align: center;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%,-0%);
+	font-size: 4em;
+	color: white;
+	background-color: #A06315;
+}
+
+.content:hover img {
+	filter: grayscale(1);
+}
+
+.content:hover .caption {
+	display: block;
+	filter: blur(0);
+}
+
+#menu {
+	 scroll-margin-top: 150px;
+}
+
+.menu {
+	position: relative;
+	height: 95vh;
+	width: 80vw;
+	text-align: left;
+	margin-left: 5vw;
+}
+
+.menu h1{
+	font-size: 2.5em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.menu h2 {
+	font-size: 2.5em;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	text-align: left;
+	margin-right: 2vw;
+}
+
+.menu h2:hover {
+	background-color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.menu p {
+	font-family: "bakeryLight";
+	font-size: 2.5em;
+	line-height: 1.75em;
+	display: inline-block;
+	flex-wrap: wrap;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.menu b {
+	font-size: 2.5em;
+	line-height: 1.75em;
+	display: inline-block;
+	flex-wrap: wrap;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.bread {
+	margin-top: 2vh
+}
+
+.donut, .cookie, .cake, .drink {
+	display: none;
+	margin-top: 2vh;
+/*	top: 25vh ;*/
+}
+
+.cake a {
+	font-family: "bakeryLight";
+	color: #41312F
+
+}
+
+.menuActive{
+	background-color: rgba(255, 255, 240,0.5);
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color: #d71e40
+}
+
+.active {
+	background-color: rgba(255, 255, 240,0.5);
+	padding: 1vh 1vw 1vh 1vw;
+}
+
+.highlight{
+	color: #d71e40
+}
+
+#location {
+	 scroll-margin-top: 180px;
+}
+
+.location {
+	position: relative;
+	width: 80vw;
+	height: 105vh;
+	text-align: left;
+	margin-top: 10vh;
+	margin-left: 5vw;
+}
+
+.location h1{
+	font-size: 2.5em;
+}
+
+.location iframe{
+	margin-top: 3vh;
+	margin-left: 1vw;
+	width: 85vw;
+	height: 65vh;
+	border: none;
+	-webkit-box-shadow: 0em 0em 0px 0.5em #d71e40, 0em 0em 0px 1em rgba(255, 255, 240,1) ; 
+	box-shadow: 0em 0em 0px 0.5em #d71e40, 0em 0em 0px 1em rgba(255, 255, 240,1) ;
+}
+
+.time{
+	position: relative; 
+	width: 85vw;
+	height: 40vh;
+	text-align: center;
+	margin-left: 5vw;
+
+}
+
+.time h1 h2 {
+	position: absolute;
+	margin-left: 2vh;
+}
+
+.time h1{
+	font-size: 3.5em;
+}
+
+.time h2{
+	font-size: 2em
+}
+
+.time a{
+	color: #41312F;
+	text-decoration: none;
+}
+
+.instagram_profile{
+	display: none
+}
+
+.igHeader {
+	position: relative;
+	width: 85vw;
+	height: 10vh;
+	text-align: left;
+	margin-left: 5vw;
+
+}
+
+.igHeader h1{
+	position: absolute;
+
+}
+
+.igHeader a {
+	color: #41312F
+}
+
+.instagram_gallery {
+	position: relative;
+	height: 120vh;
+	margin-left: 5vw;
+	width: 90vw;
+}
+
+a.instagram-image img {
+	max-width: 25vw
+}
+
+.footer {
+	position: relative;
+	height: 25vh;
+	width: 90vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	padding:0;
+	bottom: 0;
+	background: rgb(245,212,159);
+	background: linear-gradient(315deg, rgba(245,212,159,1) 0%, rgba(223,176,95,1) 37%, rgba(240,198,130,1) 59%, rgba(250,224,177,1) 94%);
+}
+
+.text {
+	width: 100vw;
+	float: left;
+	margin-top: 1vh;
+	margin-left: 2vw;
+	font-size: 1.5em;
+}
+
+.left{
+	max-width: 35vw;
+	position: relative;
+}
+
+.right {
+	padding-left: 5vw;
+	max-width: 35vw;
+	position: relative;
+}
+
+.right a {
+	color: #41312F;
+	text-decoration: none
+}
+
+.copy{
+	position: absolute;
+	bottom: 1vh;
+	right: 1vw;
+	color: rgba(255,255,255,0.5);
+}
+
+.end {
+	position: relative;
+	height: 80vh;
+}
+
+#thankYou {
+	position: absolute;
+	top: 2vh;
+	left: -10vw;
+	width: 84vw;
+	text-align: center;
+	font-size: 3.5em;
+	letter-spacing: 0.1em;
+	text-shadow: -3px 2px 6px rgb(223,176,95);
+}
+
+
+#kThanks{
+	position: absolute;
+	top: 35vh;
+	right: -9vw;
+	width: 84vw;
+	text-align: center;
+	font-size: 3.5em;
+	letter-spacing: 0.1em;
+	text-shadow: -3px 2px 6px rgb(223,176,95);
+}
+
